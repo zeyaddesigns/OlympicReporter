@@ -1,5 +1,4 @@
 
-
 public class Gamer extends Competitor
 {
 	//Instance variables

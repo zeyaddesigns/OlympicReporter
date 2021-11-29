@@ -17,7 +17,6 @@ abstract public class Competitor
 		this.name = name;
 		this.nation = nation;
 		this.level = level;
-		// An array is created with every object in order to store scores
 		scores = new int[RUNS];
 	}
 	
@@ -25,7 +24,14 @@ abstract public class Competitor
 	public int getId() { return id; }
 	public Name getName() { return name; }
 	public String getNation() { return nation; }
-	public abstract double getOverallScore();
+	public String getLevel() { return level; }
+	public void setId(int id) { this.id = id; }
+	public void setName(Name name) { this.name = name; }
+	public void setNation(String nation) { this.nation = nation; }
+	
+	//Adds a score for a particular run into the scores array
+	public void addScore(int value, int run) { scores[run-1] = value; }
+	
 	// Returns the competitors scores separated by space
 	public String getScoresArray()
 	{
@@ -33,13 +39,13 @@ abstract public class Competitor
 		for (int i = 0; i < scores.length; i++) { results += scores[i] + " "; }
 		return results;
 	} 
-	public void addScore(int value, int run) { scores[run-1] = value; }
-	public void setId(int id) { this.id = id; }
-	public void setName(Name name) { this.name = name; }
-	public void setNation(String nation) { this.nation = nation; }
 	
+	//Declares a method shared by all subclasses 
+	public abstract double getOverallScore();
+	
+	//Overrides the original method to provide useful information for when the object is called
 	public String toString()
 	{
-		return id + ", " + name.getFullName() + ", " + nation;
+		return id + ", " + name.getFullName() + ", " + nation + ", Level: " + level + ", Scores: " + getScoresArray() + " \n";
 	}
 }

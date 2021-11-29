@@ -6,17 +6,19 @@ abstract public class Competitor
 	private int id;
 	private Name name;
 	private String nation;
-	private static final int ROUNDS = 3;
+	private String level;
 	private int [] scores;
+	private static int RUNS = 3;
 	
 	//Constructor
-	public Competitor (int id, Name name, String nation)
+	public Competitor (int id, Name name, String nation, String level)
 	{
 		this.id = id;
 		this.name = name;
 		this.nation = nation;
+		this.level = level;
 		// An array is created with every object in order to store scores
-		scores = new int[ROUNDS];
+		scores = new int[RUNS];
 	}
 	
 	//Methods
@@ -40,25 +42,4 @@ abstract public class Competitor
 	{
 		return id + ", " + name.getFullName() + ", " + nation;
 	}
-	
-	// Returns the highest value in the scores array
-		public int getMaxScore()
-		{
-			int max = scores[0];
-			for (int i=1; i < scores.length; i++)
-			{
-				if (scores[i] > max) { max = scores[i]; }
-			}
-			return max;
-		}
-		
-		// Returns the total average value of the three scores
-		public double getAverageScore()
-		{
-			int total = 0;
-			for (int i = 0; i < scores.length; i++) { total += scores[i]; }
-			return (double) total/scores.length;
-		}
-
-
 }

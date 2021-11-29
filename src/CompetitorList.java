@@ -1,5 +1,8 @@
 // F21SF Assignment 2
-
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class CompetitorList 
@@ -69,6 +72,16 @@ public class CompetitorList
 		return list;
 	}
 	
-	//add more methods
+	public String listDetails()
+	{
+		String list = "ALL COMPETITOR DETAILS\n\n";
+		for (Competitor c : competitorList)
+		{	
+			list += c.toString() + "\n";	
+		}
+		return list;
+	}
+	
+	
 	
 }

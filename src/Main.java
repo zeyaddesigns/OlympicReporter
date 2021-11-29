@@ -5,9 +5,8 @@ public class Main {
 	{	
 		CompetitorList comp = new CompetitorList();
 		comp.populate();
-		System.out.println(comp.listAllGamers());
-		System.out.println(comp.listAllHackers());
-		System.out.println(comp.listAllNames());
+		System.out.println(comp.listDetails());
+		
 	}
 
 }

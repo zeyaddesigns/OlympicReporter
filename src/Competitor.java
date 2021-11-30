@@ -46,7 +46,7 @@ abstract public class Competitor
 	} 
 	
 	//Declares a method shared by all subclasses 
-	public abstract double getOverallScore();
+	public abstract String getOverallScore();
 	
 	//Overrides the original method to provide useful information for when the object is called
 	public String toString()

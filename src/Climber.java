@@ -19,12 +19,11 @@ public class Climber extends Competitor
 	public void setNearMisses(int nearMisses) {this.nearMisses = nearMisses;}
 	public void setRunTime(String runTime) {this.runTime = runTime;}
 	
-	public String getOverallScore() 
+	public double getOverallScore() 
 	{
 		int output = 0;
 		for (int i = 0; i < getScoresArray().length; i++) {output += getScoresArray()[i];}
-		double result = (output/getScoresArray().length) - nearMisses;
-		return String.format("%.2f", result);
+		return (double) (output/getScoresArray().length) - nearMisses;
 	}
 	
 	//Overrides the original method to provide useful information for when the object is called

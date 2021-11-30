@@ -19,23 +19,19 @@ public class Paraglider extends Competitor
 	public void setAltitude(double altitude) {this.altitude = altitude;}
 	public void setFlyingSpeed(double maxSpeed) {this.maxSpeed = maxSpeed;}
 	
-	public String getOverallScore() 
+	public double getOverallScore() 
 	{
 		int output = 0;
 		if (maxSpeed >= 12 && maxSpeed <= 47)
 		{
 			for (int i = 0; i < getScoresArray().length; i++) {output += getScoresArray()[i];}
-			double result = output/getScoresArray().length * maxSpeed;
-			
-			return String.format("%.2f", result);
+			return (double) output/getScoresArray().length * maxSpeed;
 		}
 		
 		else
 		{
 			for (int i = 0; i < getScoresArray().length; i++) {output += getScoresArray()[i];}
-			double result = output/getScoresArray().length;
-			
-			return String.format("%.2f", result);
+			return (double) output/getScoresArray().length;
 		}
 	}
 	

@@ -18,26 +18,23 @@ public class Skateboarder extends Competitor
 	
 	// Checks if skateboarder is Beginner/Intermediate/Expert and calculates
 	// an overall score accordingly based on their total number of tricks
-	public String getOverallScore() 
+	public double getOverallScore() 
 	{
 		int output = 0;
 		if (getLevel()=="Beginner")
 		{
 			for (int i = 0; i < getScoresArray().length; i++) {output += getScoresArray()[i];}
-			double result = ((output * 1.0)/getScoresArray().length) * numOfTricks;
-			return String.format("%.2f", result);
+			return (double) ((output * 1.0)/getScoresArray().length) * numOfTricks;
 		}
 		else if (getLevel()=="Intermediate")
 		{
 			for (int i = 0; i < getScoresArray().length; i++) {output += getScoresArray()[i];}
-			double result = ((output * 1.25)/getScoresArray().length) * numOfTricks;
-			return String.format("%.2f", result);
+			return (double) ((output * 1.25)/getScoresArray().length) * numOfTricks;
 		}
 		else
 		{
 			for (int i = 0; i < getScoresArray().length; i++) {output += getScoresArray()[i];}
-			double result = ((output * 1.50)/getScoresArray().length) * numOfTricks;
-			return String.format("%.2f", result);
+			return (double) ((output * 1.50)/getScoresArray().length) * numOfTricks;
 		}
 	}
 	

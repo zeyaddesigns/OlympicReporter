@@ -16,11 +16,31 @@ public class Skateboarder extends Competitor
 	public int getNumOfTricks() {return numOfTricks;}
 	public void setNumOfTricks(int numOfTricks) {this.numOfTricks = numOfTricks;}
 	
+	// Checks if skateboarder is Beginner/Intermediate/Expert and calculates
+	// an overall score accordingly based on their total number of tricks
 	public double getOverallScore() 
 	{
-		// calculation that takes into account
-		// near misses and run time to generate
-		// an overall score.
-		return 0;
+		int output = 0;
+		if (getLevel()=="Beginner")
+		{
+			for (int i = 0; i < getScoresArray().length; i++) {output += getScoresArray()[i];}
+			return (double) ((output * 1.0)/getScoresArray().length) * numOfTricks;
+		}
+		else if (getLevel()=="Intermediate")
+		{
+			for (int i = 0; i < getScoresArray().length; i++) {output += getScoresArray()[i];}
+			return (double) ((output * 1.25)/getScoresArray().length) * numOfTricks;
+		}
+		else
+		{
+			for (int i = 0; i < getScoresArray().length; i++) {output += getScoresArray()[i];}
+			return (double) ((output * 1.50)/getScoresArray().length) * numOfTricks;
+		}
+	}
+	
+	//Overrides the original method to provide useful information for when the object is called
+	public String toString()
+	{
+		return super.toString() + " Number of tricks: " + numOfTricks + ", Overall Score: " + getOverallScore() + ". \n";
 	}
 }

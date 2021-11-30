@@ -33,11 +33,16 @@ abstract public class Competitor
 	public void addScore(int value, int run) { scores[run-1] = value; }
 	
 	// Returns the competitors scores separated by space
-	public String getScoresArray()
+	public String getScores()
 	{
 		String results = "";
 		for (int i = 0; i < scores.length; i++) { results += scores[i] + " "; }
 		return results;
+	} 
+	
+	public int [] getScoresArray()
+	{
+		return scores;
 	} 
 	
 	//Declares a method shared by all subclasses 
@@ -46,6 +51,6 @@ abstract public class Competitor
 	//Overrides the original method to provide useful information for when the object is called
 	public String toString()
 	{
-		return id + ", " + name.getFullName() + ", " + nation + ", Level: " + level + ", Scores: " + getScoresArray() + " \n";
+		return id + ", " + name.getFullName() + ", " + nation + ", Level: " + level + ", Scores: " + getScores() + ",";
 	}
 }

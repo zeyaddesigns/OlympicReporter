@@ -21,11 +21,14 @@ public class Climber extends Competitor
 	
 	public double getOverallScore() 
 	{
-		// calculation that takes into account
-		// near misses and run time to generate
-		// an overall score.
-		return 0;
+		int output = 0;
+		for (int i = 0; i < getScoresArray().length; i++) {output += getScoresArray()[i];}
+		return (double) (output/getScoresArray().length) - nearMisses;
 	}
 	
-	
+	//Overrides the original method to provide useful information for when the object is called
+	public String toString()
+	{
+		return super.toString() + " Near Misses: " + nearMisses + ", Climb time: " + runTime + ", Overall Score: " + getOverallScore() + ". \n";
+	}
 }

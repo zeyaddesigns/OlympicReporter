@@ -1,0 +1,4 @@
+List of all competitors: 
+ID     Name                Nation          Level            Scores          Overall
+101    Martin Frenzy       Austrailia      Beginner        26 41 58         36.00
+201    Arthur Hemingway    Germany         Intermediate    81 72 46         2310.00

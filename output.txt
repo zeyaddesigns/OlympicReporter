@@ -1,4 +1,21 @@
 List of all competitors: 
 ID     Name                Nation          Level            Scores          Overall
-101    Martin Frenzy       Austrailia      Beginner        26 41 58         36.00
-201    Arthur Hemingway    Germany         Intermediate    81 72 46         2310.00
+101    Martin Frenzy       Austrailia      Beginner        26 41 58         36.0
+102    Jack Heckle         Austrailia      Intermediate    45 56 79         58.0
+103    Sue Obrine          Japan           Intermediate    51 32 69         47.0
+104    Edward Mouldin      Mexico          Expert          87 94 91         89.0
+105    Zak Thorn           Spain           Beginner        17 38 51         29.0
+201    Arthur Hemingway    Germany         Intermediate    81 72 46         2321.6666666666665
+202    James McGiben       France          Beginner        24 41 60         1708.3333333333333
+203    Craig Harty         France          Expert          75 83 89         82.33333333333333
+204    Hank Johnston       United States   Expert          81 92 96         89.66666666666667
+205    Emily Bogwater      Canada          Intermediate    45 68 31         48.0
+301    Tony Hawk           United States   Expert          85 92 94         1626.0
+302    Ollie Badger        United States   Expert          71 88 91         1375.0
+303    Jessica Alberta     Argentina       Beginner        42 33 25         200.0
+304    Jose Rose           United Kingdom  Beginner        39 48 51         414.0
+305    Alex Browntin       Russia          Intermediate    62 50 31         643.5
+
+
+
+The competitor with the highest overall score is 

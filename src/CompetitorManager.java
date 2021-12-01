@@ -16,7 +16,7 @@ public class CompetitorManager
 		// Reads data from a specified input file
 		list.readFromFile("ClimberInput.csv");
 		list.readFromFile("ParagliderInput.csv");
-		//list.readFromFile("SkateboarderInput.csv"); 
+		list.readFromFile("SkateboarderInput.csv"); 
 				
 		// Outputs the data into a specified file
 		list.writeToFile("output.txt", list.getTableofCompetitors());

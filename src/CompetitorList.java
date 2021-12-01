@@ -61,6 +61,9 @@ public class CompetitorList
 			report += c.getOverallScore();
 			report += "\n";
 		}
+		//Add below once getHighestScorer() is created
+		//report += "\n\n\n";
+		//report += "The competitor with the highest overall score is \n";
 		return report;
 	}
 	
@@ -218,11 +221,32 @@ public class CompetitorList
 	//Goes through each line, separates data and allocates variables in order to construct objects
 	public void processLineC(String line)
 	{
-			
+		String idNum, numTricks = "";
+		
+		// Separates strings between every comma
+		String parts [] = line.split(",");
+		
+		// Removes spaces from the String and convert it to int
+		idNum = parts[0];
+		idNum = idNum.trim();
+		int id = Integer.parseInt(idNum);
+		
+		String name = parts[1];
+		String nation = parts[2];
+		String level = parts[3];
+		
+		numTricks = parts[4];
+		numTricks = numTricks.trim();
+		int numOfTricks = Integer.parseInt(numTricks);
+		
+		// Creates a new Skateboarder object
+		Skateboarder c = new Skateboarder (id, new Name (name), nation, level, numOfTricks);
+		
+		// Adds newly created object to the array list
+		this.addCompetitor(c);
+		// Sets scores for the object
+		c.addScore(Integer.valueOf(parts[5]), 1);
+		c.addScore(Integer.valueOf(parts[6]), 2);
+		c.addScore(Integer.valueOf(parts[7]), 3);
 	}
-	
-	
-	
-	
-	
 }

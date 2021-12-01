@@ -15,7 +15,3 @@ ID     Name                Nation          Level            Scores          Over
 303    Jessica Alberta     Argentina       Beginner        42 33 25         200.0
 304    Jose Rose           United Kingdom  Beginner        39 48 51         414.0
 305    Alex Browntin       Russia          Intermediate    62 50 31         643.5
-
-
-
-The competitor with the highest overall score is 

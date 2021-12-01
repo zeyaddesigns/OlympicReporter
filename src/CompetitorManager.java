@@ -24,5 +24,17 @@ public class CompetitorManager
 		// Prints out the data in table form via console
 		System.out.println(list.getTableofCompetitors());
 		System.out.println();
+		
+	
 	}
+	
+	//show GUIs
+    public void showGUI() 
+    {
+    	//create main GUI with competitorList object
+    	CompetitorGUI g = new CompetitorGUI(list);
+        g.setVisible(true);
+    }
+	
+	
 }

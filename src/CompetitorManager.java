@@ -22,10 +22,8 @@ public class CompetitorManager
 		list.writeToFile("output.txt", list.getTableofCompetitors());
 				
 		// Prints out the data in table form via console
-		System.out.println(list.getTableofCompetitors());
-		System.out.println();
-		
-	
+		//System.out.println(list.getTableofCompetitors());
+		//System.out.println();
 	}
 	
 	//show GUIs
@@ -33,8 +31,19 @@ public class CompetitorManager
     {
     	//create main GUI with competitorList object
     	CompetitorGUI g = new CompetitorGUI(list);
+    	
+    	g.setTitle("CompetitorList");
+		g.setDefaultCloseOperation(g.DO_NOTHING_ON_CLOSE);
+		g.setSize(500, 800);
+		
+		
+		//Setups for North, South and Centre
+		g.setupNorthPanel();
+		g.setupSouthPanel();
+		g.setupCenterPanel();
+		
+		
         g.setVisible(true);
+        g.pack();
     }
-	
-	
 }

@@ -54,10 +54,8 @@ abstract public class Competitor
 		return id + ", " + name.getFullName() + ", " + nation + ", Level: " + level + ", Scores: " + getScores() + ",";
 	}
 	
-	//Returns the name of a single competitor with the highest overall score
-	public String getHighestScorer()
+	public String getShortDetails()
 	{
-		//TODO
-		return null;
+		return id + " " + name.getFullName() + " has overall score " + getOverallScore() + ". \n";
 	}
 }

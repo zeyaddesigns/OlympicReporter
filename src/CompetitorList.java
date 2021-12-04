@@ -67,6 +67,55 @@ public class CompetitorList
 		return report;
 	}
 	
+	public String getCompetitors()
+	{
+		String report = "";
+		for (Competitor c : competitorList)
+		{
+			report += c;
+		}
+		return report;
+	}
+	
+	public String getClimbers()
+	{
+		String report = "";
+		for (Competitor c : competitorList)
+		{
+			if (c instanceof Climber) 
+			{
+				report += c;	
+			}
+		}
+		return report;
+	}
+	
+	public String getParagliders()
+	{
+		String report = "";
+		for (Competitor c : competitorList)
+		{
+			if (c instanceof Paraglider) 
+			{
+				report += c;	
+			}
+		}
+		return report;
+	}
+	
+	public String getSkateboarders()
+	{
+		String report = "";
+		for (Competitor c : competitorList)
+		{
+			if (c instanceof Skateboarder) 
+			{
+				report += c;	
+			}
+		}
+		return report;
+	}
+	
 	//Produces a file containing specified data
 	public void writeToFile(String filename, String report)
 	{

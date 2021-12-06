@@ -5,8 +5,6 @@ public class Main {
 	{	
 		CompetitorManager cm = new CompetitorManager();
 		cm.run();
-		cm.showCompetitorGUI();
-		//cm.showEditorGUI();
 	}
 
 }

@@ -21,6 +21,9 @@ public class CompetitorManager
 				
 		// Outputs the data into a specified file
 		list.writeToFile("output.txt", list.getTableofCompetitors());
+		
+		showCompetitorGUI();
+		showEditorGUI();
 	}
 	
 	//show Competitor GUIs
@@ -32,16 +35,30 @@ public class CompetitorManager
     	g.setTitle("Competitor GUI");
 		g.setDefaultCloseOperation(g.DO_NOTHING_ON_CLOSE);
 		g.setPreferredSize(new Dimension(600,300));
-		g.setLocationRelativeTo(null);
-		//g.setResizable(false);
+		g.setLocation(200,200);
 		
 		//Setups for North, South and Centre
 		g.setupNorthPanel();
 		g.setupSouthPanel();
-		g.setupCenterPanel();  
+		g.setupCenterPanel(); 
 		
 		g.setVisible(true);
 	    g.pack();
 		
+    }
+    
+    public void showEditorGUI()
+    {
+    	EditorGUI e = new EditorGUI(list);
+    	e.setTitle("Editor GUI");
+		e.setDefaultCloseOperation(e.DO_NOTHING_ON_CLOSE);
+		
+		e.setupNorthPanel();
+		e.setupCenterPanel(); 
+		e.setupSouthPanel();
+		e.setLocation(800,200);
+		e.setVisible(true);
+	    e.pack();
+    	
     }
 }

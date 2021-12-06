@@ -10,21 +10,17 @@ public class CompetitorGUI extends JFrame  implements ActionListener
     private CompetitorList competitorList;
     
     //GUI components
-    JButton close, find, edit;
+    JButton close, find;
     JTextArea textArea;
     JTextField textField;
     JLabel findByID;
     JScrollPane scrollList;
     JRadioButton all, climbers, paragliders, skateboarders;
-     // create a button group , buttons in a button group knows how to behave together
-    
+     
     //Create the frame with its panels.
     public CompetitorGUI(CompetitorList list)
     {
         this.competitorList = list;
-
-		//for background colour getContentPane().setBackground(Color.LIGHT_GRAY);
-  
     }
 
     public void setupNorthPanel()
@@ -42,10 +38,6 @@ public class CompetitorGUI extends JFrame  implements ActionListener
         find = new JButton("Find");
         find.addActionListener(this);
         p.add(find);
-        
-        edit = new JButton("Edit");
-        edit.addActionListener(this);
-        p.add(edit);
         
         close = new JButton("Close");
         close.addActionListener(this);
@@ -91,17 +83,9 @@ public class CompetitorGUI extends JFrame  implements ActionListener
     //find which button and act accordingly
     public void actionPerformed(ActionEvent e) 
     { 
-    	if (e.getSource() == textField) 
-    	{
-    		//TODO
-    	}
-    	else if (e.getSource() == find) 
+    	if (e.getSource() == find) 
     	{
     		find();
-    	}
-    	else if (e.getSource() == edit) 
-    	{
-    		//TODO
     	}
     	else if (e.getSource() == close) 
     	{
@@ -134,18 +118,13 @@ public class CompetitorGUI extends JFrame  implements ActionListener
     		//Convert id string to int
     		int intId = Integer.parseInt(searchId);
     		Competitor c = competitorList.findById(intId);
+    		
     		if (c != null)
-    		{
-    			textArea.setText(c.getShortDetails());
-    		}
+    		{textArea.setText(c.getShortDetails());}
     		else
-    		{
-    			textArea.setText("ID not found");
-    		}
+    		{textArea.setText("ID not found");}
     	}
     	else
-    	{
-    		textArea.setText("no valid entry");
-    	}
+    	{textArea.setText("no valid entry");}
     }
 }
